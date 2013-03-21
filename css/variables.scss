@@ -1,0 +1,35 @@
+/* background colors */
+
+$color-html-bg: #686560;
+$color-body-bg: #f4f2ed;
+
+/* text color */
+
+$color-text: #424242;
+$color-text-h1: #2e2e2e;
+$color-text-h2: #2e2e2e;
+
+/* link text color */
+
+$color-link: #008a7b;
+$color-link-hover: #8b0041;
+
+/* border colors */
+
+$color-border-gray: #ccc;
+
+/* fonts */
+
+$font-sans-serif: "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+$font-serif: "Times New Roman", Times, serif;
+$font-bold: "HelveticaNeue", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+/* responsive screen sizes */
+
+$iphone-portrait: "only screen and (max-width: 330px)";
+$iphone4-landscape: "only screen and (min-width: 331px) and (max-width: 500px)";
+$iphone5-landscape: "only screen and (min-width: 501px) and (max-width: 760px)";
+$ipad-portrait: "only screen and (min-width: 761px) and (max-width: 955px)";
+$retina-display: "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx)";
+
+
