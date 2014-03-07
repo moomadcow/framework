@@ -1,28 +1,24 @@
-/* common body and text styles */
+/* common styles and basic content containers shared across all assets */
 
-// enable box sizing if you don't are about IE7-8 compatibility
-/* * {
+/* enable border-box sizing, not compatible with IE8 */
+* {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-}*/
+}
 
 html {
-	background: $color-body-bg;
+	background: $color-html-bg;
 	height: 100%;
 	width: 100%;
 }
 
 body {
-	background: $color-body-bg url('images/ricepaper2.png') repeat;
-	font-family: $font-sans-serif;
+	background: $color-body-bg;
+	font-family: $fonts;
 	font-size: 16px;
 	line-height: 1;
 	color: $color-text;
-	@media #{$retina-display} {
-		background: $color-body-bg url('images/ricepaper2-2x.png') repeat;
-		background-size: 485px 485px;
-	}
 }
 
 a {
@@ -44,24 +40,20 @@ h1 {
 	font-size: 32px;
 	color: $color-text-h1;
 	text-shadow: 0 1px #fff;
-	line-height: 1.1;
-	font-family: $font-bold;
+	line-height: 1.2;
 }
 
 h2 {
 	font-size: 22px;
 	color: $color-text-h2;
 	text-shadow: 0 1px #fff;
-	line-height: 1.1;
-	font-family: $font-bold;
+	line-height: 1.2;
 }
 
 h3 {
-	font-family: $font-bold;
 }
 
 b, strong {
-	font-family: $font-bold;
 	font-weight: bold;
 }
 
@@ -102,3 +94,4 @@ pre {
 
 .float-left {float: left;}
 .float-right {float: right;}
+
