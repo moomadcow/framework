@@ -7,6 +7,7 @@
 	-webkit-box-sizing: border-box;
 }
 
+/* basic content styles */
 html {
 	background: $color-html-bg;
 	height: 100%;
@@ -72,26 +73,48 @@ pre {
 }
 
 
-/* containers and operational styles */
-
-.container {position: relative;}
+/* operational styles */
 .clear {clear: both;}
 
-.bordered {border: 1px solid $color-border-gray;}
+.border-gray {border: 1px solid $color-border-gray;}
 
-.rounded-2 {border-radius: 2px;}
-.rounded-4 {border-radius: 4px;}
-.rounded-6 {border-radius: 6px;}
-.rounded-8 {border-radius: 8px;}
-.rounded-10 {border-radius: 10px;}
-.rounded-12 {border-radius: 12px;}
+.round-corner-2 {border-radius: 2px;}
+.round-corner-4 {border-radius: 4px;}
+.round-corner-6 {border-radius: 6px;}
+.round-corner-8 {border-radius: 8px;}
+.round-corner-10 {border-radius: 10px;}
+.round-corner-12 {border-radius: 12px;}
 
-.height-6 {height: 6px;}
-.height-8 {height: 8px;}
-.height-10 {height: 10px;}
-.height-20 {height: 20px;}
-.height-40 {height: 40px;}
+.padding-2 {padding: 2px;}
+.padding-4 {padding: 4px;}
+.padding-5 {padding: 5px;}
+.padding-6 {padding: 6px;}
+.padding-8 {padding: 8px;}
+.padding-10 {padding: 10px;}
+.padding-20 {padding: 20px;}
 
 .float-left {float: left;}
 .float-right {float: right;}
+
+/* content container */
+.content-container {
+	width: 100%;
+	position: relative;
+	/* this enables hardware acceleration on some browser */
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	.container {
+		width: 100%;
+		padding: 10px;
+	}
+	&.fixed-width {
+		.container {
+			width: 960px;
+			margin: 0 auto;
+			padding: 10px;
+		}
+	}
+}
 

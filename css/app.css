@@ -10,7 +10,6 @@
   src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 .fa {
   display: inline-block;
   font-family: FontAwesome;
@@ -86,35 +85,30 @@
 
   100% {
     -moz-transform: rotate(359deg); } }
-
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg); }
 
   100% {
     -webkit-transform: rotate(359deg); } }
-
 @-o-keyframes spin {
   0% {
     -o-transform: rotate(0deg); }
 
   100% {
     -o-transform: rotate(359deg); } }
-
 @-ms-keyframes spin {
   0% {
     -ms-transform: rotate(0deg); }
 
   100% {
     -ms-transform: rotate(359deg); } }
-
 @keyframes spin {
   0% {
     transform: rotate(0deg); }
 
   100% {
     transform: rotate(359deg); } }
-
 .fa-rotate-90 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
   -webkit-transform: rotate(90deg);
@@ -1340,6 +1334,7 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box; }
 
+/* basic content styles */
 html {
   background: white;
   height: 100%;
@@ -1393,51 +1388,71 @@ pre {
   font-family: Courier, sans-serif;
   font-size: 12px; }
 
-/* containers and operational styles */
-.container {
-  position: relative; }
-
+/* operational styles */
 .clear {
   clear: both; }
 
-.bordered {
+.border-gray {
   border: 1px solid #cccccc; }
 
-.rounded-2 {
+.round-corner-2 {
   border-radius: 2px; }
 
-.rounded-4 {
+.round-corner-4 {
   border-radius: 4px; }
 
-.rounded-6 {
+.round-corner-6 {
   border-radius: 6px; }
 
-.rounded-8 {
+.round-corner-8 {
   border-radius: 8px; }
 
-.rounded-10 {
+.round-corner-10 {
   border-radius: 10px; }
 
-.rounded-12 {
+.round-corner-12 {
   border-radius: 12px; }
 
-.height-6 {
-  height: 6px; }
+.padding-2 {
+  padding: 2px; }
 
-.height-8 {
-  height: 8px; }
+.padding-4 {
+  padding: 4px; }
 
-.height-10 {
-  height: 10px; }
+.padding-5 {
+  padding: 5px; }
 
-.height-20 {
-  height: 20px; }
+.padding-6 {
+  padding: 6px; }
 
-.height-40 {
-  height: 40px; }
+.padding-8 {
+  padding: 8px; }
+
+.padding-10 {
+  padding: 10px; }
+
+.padding-20 {
+  padding: 20px; }
 
 .float-left {
   float: left; }
 
 .float-right {
   float: right; }
+
+/* content container */
+.content-container {
+  width: 100%;
+  position: relative;
+  /* this enables hardware acceleration on some browser */
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden; }
+  .content-container .container {
+    width: 100%;
+    padding: 10px; }
+  .content-container.fixed-width .container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 10px; }
