@@ -1448,7 +1448,8 @@ pre {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  /* the container inside content-container will give us the flexibility to control responsive sizes */ }
   .content-container .container {
     width: 100%;
     padding: 10px; }
@@ -1456,3 +1457,12 @@ pre {
     width: 960px;
     margin: 0 auto;
     padding: 10px; }
+    @media only screen and (min-width: 761px) and (max-width: 955px) {
+      .content-container.fixed-width .container {
+        width: 768px; } }
+    @media only screen and (min-width: 460px) and (max-width: 760px) {
+      .content-container.fixed-width .container {
+        width: 480px; } }
+    @media only screen and (max-width: 459px) {
+      .content-container.fixed-width .container {
+        width: 320px; } }

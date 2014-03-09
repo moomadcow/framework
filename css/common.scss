@@ -105,6 +105,7 @@ pre {
 	-moz-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
+	/* the container inside content-container will give us the flexibility to control responsive sizes */
 	.container {
 		width: 100%;
 		padding: 10px;
@@ -114,6 +115,15 @@ pre {
 			width: 960px;
 			margin: 0 auto;
 			padding: 10px;
+			@media #{$ipad-portrait} {
+				width: 768px;
+			}
+			@media #{$iphone-landscape} {
+				width: 480px;
+			}
+			@media #{$iphone-portrait} {
+				width: 320px;
+			}
 		}
 	}
 }
