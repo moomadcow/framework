@@ -266,15 +266,17 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
-	"\/index.jade": {
-		"compileDebug": 1,
-		"fileType": 512,
+	"\/index.slim": {
+		"compileOnly": 0,
+		"fileType": 1024,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/index.jade",
+		"inputAbbreviatedPath": "\/index.slim",
+		"logicless": 0,
 		"outputAbbreviatedPath": "\/index.html",
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 0
+		"outputStyle": 0,
+		"railsCompatible": 0
 		},
 	"\/js\/jquery-2.1.0.min.js": {
 		"fileType": 64,
@@ -896,7 +898,7 @@
 	"slimAutoOutputPathStyle": 0,
 	"slimCompileOnly": 0,
 	"slimLogicless": 0,
-	"slimOutputStyle": 1,
+	"slimOutputStyle": 0,
 	"slimRailsCompatible": 0,
 	"stylusAutoOutputPathRelativePath": "..\/css",
 	"stylusAutoOutputPathReplace1": "stylus",
