@@ -32,22 +32,22 @@ a {
 
 p {
 	margin-bottom: 1em;
-	text-shadow: 0 1px #fff;
 	color: $color-text;
-	line-height: 1.3;
+	line-height: 1.4;
+	a {
+		text-decoration: underline;
+	}
 }
 
 h1 {
 	font-size: 32px;
 	color: $color-text-h1;
-	text-shadow: 0 1px #fff;
 	line-height: 1.2;
 }
 
 h2 {
 	font-size: 22px;
 	color: $color-text-h2;
-	text-shadow: 0 1px #fff;
 	line-height: 1.2;
 }
 
@@ -96,6 +96,8 @@ pre {
 .float-left {float: left;}
 .float-right {float: right;}
 
+.container {position: relative;}
+
 /* content container */
 .content-container {
 	width: 100%;
@@ -105,25 +107,32 @@ pre {
 	-moz-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
-	/* the container inside content-container will give us the flexibility to control responsive sizes */
+	/* the container inside content-container will give us the
+	   flexibility to control responsive sizes */
 	.container {
-		width: 100%;
+		width: 960px;
+		margin: 0 auto;
 		padding: 10px;
+		@media #{$ipad-portrait} {
+			width: 768px;
+		}
+		@media #{$iphone-landscape}, #{$iphone-portrait} {
+			width: 100%;
+		}
 	}
 	&.fixed-width {
 		.container {
-			width: 960px;
-			margin: 0 auto;
-			padding: 10px;
-			@media #{$ipad-portrait} {
-				width: 768px;
-			}
 			@media #{$iphone-landscape} {
 				width: 480px;
 			}
 			@media #{$iphone-portrait} {
 				width: 320px;
 			}
+		}
+	}
+	&.no-padding {
+		.container {
+			padding: 0;
 		}
 	}
 }
