@@ -1,3 +1,4 @@
+@import url(html5-doctor-reset-stylesheet.min.css);
 /*!
  *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -1471,3 +1472,48 @@ pre {
       width: 320px; } }
   .content-container.no-padding .container {
     padding: 0; }
+
+/* form styles 
+	imported from form.scss */
+/* form grouping and spacing */
+.form-group {
+  padding: 0 0 16px 0;
+  clear: both; }
+
+.form-fields {
+  padding: 0 0 4px 0;
+  clear: both; }
+
+/* label for normal text inputs */
+label {
+  font-size: 12px;
+  position: relative;
+  line-height: 1; }
+
+/* text inputs */
+input[type=text], input[type=password], input[type=email], textarea {
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  display: block;
+  box-shadow: 0 0 0 2px transparent, inset 0 2px 0 0 rgba(0, 0, 0, 0.2);
+  background: #fff;
+  padding: 10px;
+  outline: none;
+  -webkit-transition: box-shadow 1s;
+  -moz-transition: box-shadow 1s;
+  -o-transition: box-shadow 1s;
+  transition: box-shadow 1s;
+  -webkit-appearance: none; }
+  input[type=text]:disabled, input[type=password]:disabled, input[type=email]:disabled, textarea:disabled {
+    border: none;
+    background: transparent;
+    box-shadow: none; }
+
+textarea {
+  height: 140px; }
+
+/* text input error */
+.error input[type=text], .error input[type=password], .error input[type=email], .error textarea {
+  box-shadow: 0 0 0 2px #ff9595; }

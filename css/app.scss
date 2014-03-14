@@ -1,6 +1,12 @@
 // main app css
 
+// html5 reset
+@import 'html5-doctor-reset-stylesheet.min.css';
+
+// font awesome import
 @import 'fa/font-awesome';
 
+// styles for main app
 @import 'variables';
 @import 'common';
+@import 'forms';
