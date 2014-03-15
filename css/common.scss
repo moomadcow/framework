@@ -109,7 +109,7 @@ pre {
 	backface-visibility: hidden;
 	/* the container inside content-container will give us the
 	   flexibility to control responsive sizes */
-	.container {
+	> .container {
 		width: 960px;
 		margin: 0 auto;
 		padding: 10px;
@@ -121,7 +121,7 @@ pre {
 		}
 	}
 	&.fixed-width {
-		.container {
+		> .container {
 			@media #{$iphone-landscape} {
 				width: 480px;
 			}
@@ -131,7 +131,7 @@ pre {
 		}
 	}
 	&.no-padding {
-		.container {
+		> .container {
 			padding: 0;
 		}
 	}

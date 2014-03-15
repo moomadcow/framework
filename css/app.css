@@ -1454,23 +1454,23 @@ pre {
   backface-visibility: hidden;
   /* the container inside content-container will give us the
      flexibility to control responsive sizes */ }
-  .content-container .container {
+  .content-container > .container {
     width: 960px;
     margin: 0 auto;
     padding: 10px; }
     @media only screen and (min-width: 761px) and (max-width: 955px) {
-      .content-container .container {
+      .content-container > .container {
         width: 768px; } }
     @media only screen and (min-width: 460px) and (max-width: 760px), only screen and (max-width: 459px) {
-      .content-container .container {
+      .content-container > .container {
         width: 100%; } }
   @media only screen and (min-width: 460px) and (max-width: 760px) {
-    .content-container.fixed-width .container {
+    .content-container.fixed-width > .container {
       width: 480px; } }
   @media only screen and (max-width: 459px) {
-    .content-container.fixed-width .container {
+    .content-container.fixed-width > .container {
       width: 320px; } }
-  .content-container.no-padding .container {
+  .content-container.no-padding > .container {
     padding: 0; }
 
 /* form styles 
