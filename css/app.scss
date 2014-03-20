@@ -6,7 +6,11 @@
 // font awesome import
 @import 'fa/font-awesome';
 
-// styles for main app
+// import style modules
 @import 'variables';
 @import 'common';
 @import 'forms';
+@import 'modal';
+@import 'tooltips';
+
+
