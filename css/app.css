@@ -1326,6 +1326,7 @@
 /* text color */
 /* link text color */
 /* border colors */
+/* theme colors */
 /* fonts */
 /* responsive screen sizes */
 /* common styles and basic content containers shared across all assets */
@@ -1526,6 +1527,7 @@ textarea {
 /* text color */
 /* link text color */
 /* border colors */
+/* theme colors */
 /* fonts */
 /* responsive screen sizes */
 .modal {
@@ -1536,7 +1538,10 @@ textarea {
   left: 50%;
   width: 0;
   height: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  /* modal content formatting */
+  /* overlay for overflowing text */ }
   .csstransitions .modal {
     display: block;
     -webkit-transition-property: opacity;
@@ -1560,122 +1565,99 @@ textarea {
     display: block;
     overflow: visible;
     opacity: 1;
-    height: auto; }
-  .modal.text {
+    height: auto;
     width: 800px;
     margin-left: -410px;
     padding: 10px;
-    background: #dadada;
-    /* modal content formatting */ }
+    background: #e4e4e4; }
     @media only screen and (min-width: 761px) and (max-width: 955px) {
-      .modal.text {
+      .modal.active {
         width: 600px;
         margin-left: -310px; } }
     @media only screen and (min-width: 460px) and (max-width: 760px) {
-      .modal.text {
+      .modal.active {
         width: 400px;
         margin-left: -210px; } }
     @media only screen and (max-width: 459px) {
-      .modal.text {
+      .modal.active {
         width: 260px;
         padding: 6px;
         margin-left: -136px; } }
-    .modal.text .content {
-      background: #fff;
-      padding: 20px 30px 40px 30px;
-      max-height: 460px;
-      min-height: 100px;
-      overflow: auto; }
-      @media only screen and (min-width: 460px) and (max-width: 760px) {
-        .modal.text .content {
-          max-height: 200px;
-          padding: 12px 12px 30px 12px; } }
-      @media only screen and (max-width: 459px) {
-        .modal.text .content {
-          padding: 12px 12px 30px 12px;
-          max-height: 320px; } }
-      .modal.text .content h1 {
-        font-size: 24px; }
-      @media only screen and (min-width: 460px) and (max-width: 760px), only screen and (max-width: 459px) {
-        .modal.text .content h1 {
-          font-size: 20px;
-          line-height: 1.1; }
-        .modal.text .content p {
-          font-size: 12px; }
-        .modal.text .content ul {
-          font-size: 12px; }
-        .modal.text .content ol {
-          font-size: 12px; } }
-    .modal.text .overlay {
-      width: 780px;
-      height: 60px;
-      position: absolute;
-      bottom: 0px;
-      background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 73%, white 100%);
-      /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(73%, white), color-stop(100%, white));
-      /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 73%, white 100%);
-      /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 73%, white 100%);
-      /* Opera 11.10+ */
-      background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 73%, white 100%);
-      /* IE10+ */
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 73%, white 100%);
-      /* W3C */
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
-      /* IE6-9 */
-      pointer-events: none; }
-      @media only screen and (min-width: 761px) and (max-width: 955px) {
-        .modal.text .overlay {
-          width: 580px; } }
-      @media only screen and (min-width: 460px) and (max-width: 760px) {
-        .modal.text .overlay {
-          width: 380px;
-          height: 30px; } }
-      @media only screen and (max-width: 459px) {
-        .modal.text .overlay {
-          width: 240px;
-          height: 40px; } }
-  .modal.video {
-    width: 800px;
-    margin-left: -400px;
-    padding: 10px;
-    background: #fff; }
+  .modal .content {
+    background: #fff;
+    padding: 20px 30px 40px 30px;
+    max-height: 460px;
+    min-height: 100px;
+    overflow: auto; }
+    @media only screen and (min-width: 460px) and (max-width: 760px) {
+      .modal .content {
+        max-height: 200px;
+        padding: 12px 12px 30px 12px; } }
+    @media only screen and (max-width: 459px) {
+      .modal .content {
+        padding: 12px 12px 30px 12px;
+        max-height: 320px; } }
+    .modal .content h1 {
+      font-size: 24px; }
+    @media only screen and (min-width: 460px) and (max-width: 760px), only screen and (max-width: 459px) {
+      .modal .content h1 {
+        font-size: 20px;
+        line-height: 1.1; }
+      .modal .content p {
+        font-size: 12px; }
+      .modal .content ul {
+        font-size: 12px; }
+      .modal .content ol {
+        font-size: 12px; } }
+  .modal .overlay {
+    width: 780px;
+    height: 60px;
+    position: absolute;
+    bottom: 0px;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 73%, white 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(73%, white), color-stop(100%, white));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 73%, white 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 73%, white 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 73%, white 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 73%, white 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+    /* IE6-9 */
+    pointer-events: none; }
     @media only screen and (min-width: 761px) and (max-width: 955px) {
-      .modal.video {
-        width: 600px;
-        margin-left: -300px; }
-        .modal.video iframe {
-          width: 600px;
-          height: 361px;
-          overflow: hidden; } }
+      .modal .overlay {
+        width: 580px; } }
+    @media only screen and (min-width: 460px) and (max-width: 760px) {
+      .modal .overlay {
+        width: 380px;
+        height: 30px; } }
+    @media only screen and (max-width: 459px) {
+      .modal .overlay {
+        width: 240px;
+        height: 40px; } }
   .modal .close {
     display: block;
     position: absolute;
-    width: 31px;
-    height: 31px;
-    background: transparent url(sprite-modal-close.png) no-repeat 0 0;
     z-index: 10;
+    width: 30px;
+    height: 30px;
     top: -22px;
     right: -22px;
-    -webkit-tap-highlight-color: transparent; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {
-      .modal .close {
-        background-image: url(sprite-modal-close-2x.png);
-        background-size: 31px 100px; } }
-    .no-touch .modal .close:hover, .modal .close:active {
-      background-position: 0 -50px; }
-  .modal .shadow {
-    position: absolute;
-    bottom: -20px;
-    width: 100%;
-    height: 10px;
-    background: transparent url(shadow-curved-photo-md.png) no-repeat center top;
-    background-size: 100% 10px; }
-    @media only screen and (max-width: 459px) {
-      .modal .shadow {
-        bottom: -16px; } }
+    -webkit-tap-highlight-color: transparent;
+    background: white;
+    border-radius: 40px;
+    border: 2px solid #008a7b; }
+    .modal .close .fa {
+      font-size: 23px;
+      margin: 2px 0 0 3px; }
+    .no-touch .modal .close:hover {
+      color: #8b0041;
+      border-color: #8b0041; }
 
 .modal-overlay {
   display: block;
@@ -1684,9 +1666,8 @@ textarea {
   left: 0;
   width: 0;
   height: 0;
-  background: #f2f2f2;
+  background: rgba(255, 255, 255, 0.8);
   z-index: 900;
-  opacity: 0;
   -webkit-transition-property: opacity;
   -webkit-transition-duration: 400ms;
   -moz-transition-property: opacity;
@@ -1699,41 +1680,8 @@ textarea {
   transition-duration: 400ms; }
   .modal-overlay.active {
     display: block;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-    filter: alpha(opacity=90);
-    opacity: 0.9;
     width: 100%;
     height: 100%; }
-    @media only screen and (min-width: 460px) and (max-width: 760px), only screen and (max-width: 459px) {
-      .modal-overlay.active {
-        background: #000;
-        opacity: 0.6; } }
-
-/* sign in modal */
-.sign-in-modal h1 {
-  margin-bottom: 0.2em; }
-.sign-in-modal h2 {
-  margin-bottom: 0.1em;
-  padding-top: 0.4em;
-  border-top: 1px solid #cccccc; }
-.sign-in-modal .form-group {
-  position: relative; }
-  .sign-in-modal .form-group .form-field {
-    float: left;
-    margin-right: 10px; }
-    .sign-in-modal .form-group .form-field input.shortest {
-      width: 120px; }
-  .sign-in-modal .form-group .button {
-    float: left;
-    margin-top: 18px;
-    position: absolute;
-    right: 0; }
-.sign-in-modal .forgot-password-link {
-  top: 5px;
-  position: relative;
-  font-size: 12px; }
-.sign-in-modal .forgot-password {
-  display: none; }
 
 /*
 	tooltips - standard "help content" tooltips
@@ -1743,6 +1691,7 @@ textarea {
 /* text color */
 /* link text color */
 /* border colors */
+/* theme colors */
 /* fonts */
 /* responsive screen sizes */
 .tooltip-container {
